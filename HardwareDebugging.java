@@ -111,6 +111,7 @@ public class HardwareDebugging extends OpMode
         double Motor1Power;
         double Motor2Power;
         double Posi = 0;
+        double Posi = servo1.getPosition();
 
 
 
@@ -143,6 +144,7 @@ public class HardwareDebugging extends OpMode
         dc_Motor2.setPower(Motor2Power);
         servo1.setPosition(Posi);
         servo2.setPosition(-Posi);
+        servo2.setPosition(Posi);
         double Servo1 = servo1.getPosition();
         double Servo2 = servo2.getPosition();
 
@@ -153,6 +155,7 @@ public class HardwareDebugging extends OpMode
         telemetry.addData("Motor ID", "Motor1:(%.2f), Motor2:(%.2f)", dc_Motor1, dc_Motor2);
 
         telemetry.addData("Servos", "servo1 ($.2f), servo2 (%.2f)", Servo1 , Servo2);
+        telemetry.addData("Servos", "Servo1 ($.2f), Servo2 (%.2f)", Servo1 , Servo2);
 
     }
 
